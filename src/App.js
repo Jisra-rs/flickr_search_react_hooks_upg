@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import HomeHeader from './components/HomeHeader';
+import SearchTool from './components/SearchTool';
+import PicturesResult from './components/PicturesResults';
+import PaginationResults from './components/PaginationResults';
+import HomeContainer from './components/HomeContainer';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HomeHeader/>
+      <SearchTool/>
+      <PaginationResults/>
+      <PicturesResult/>
+      <HomeContainer/>
     </div>
   );
 }
