@@ -3,6 +3,7 @@ import SearchTool from './components/SearchTool';
 import PicturesResult from './components/PicturesResults';
 import PaginationResults from './components/PaginationResults';
 import HomeContainer from './components/HomeContainer';
+import PictureModalView from './components/PictureModalView';
 
 import './App.css';
 
