@@ -7,7 +7,7 @@ class SearchTool extends Component{
   }
 
   handleChange = ({ target }) => {
-    const { name, value } = target
+    const { value } = target
     this.setState({ search : value});
     console.log(this.state.search);
   }
@@ -22,7 +22,6 @@ class SearchTool extends Component{
                   <div className="_searchObj">
                       <input 
                         type="text" 
-                        name="_pic_search" 
                         id="_text_label" 
                         value={ search }
                         onChange={ this.handleChange }

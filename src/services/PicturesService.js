@@ -3,14 +3,10 @@ const URL_FLICKR_REST = "https://api.flickr.com/services/rest/?method=flickr.pho
 const APP_API_KEY = "711fee89a5c0c9b86b046e640eb1ec3b";
 const URL_FETCH = URL_FLICKR_REST + '&api_key=' + APP_API_KEY ;
 
-
-
-// function PicturesResultsContextProvider (props) {
 export async function getPicturesBySearch (q) {
     const picture = q;
-
     const URL = URL_FETCH + '&text=' + picture + '&format=json&nojsoncallback=1';
-    // Promesas
+    // Fetch-Promise
     const response = await fetch(URL)
     const responseJson = await response.json()
       return responseJson

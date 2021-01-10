@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import HomeHeader from './HomeHeader';
 import SearchTool from './SearchTool';
+import PicturesResults from './PicturesResults';
+import Loader from './Loader';
 import { getPicturesBySearch } from '../services/PicturesService';
 
 class HomeContainer extends Component{
@@ -29,6 +31,7 @@ class HomeContainer extends Component{
             <>
                 <HomeHeader/>
                 <SearchTool handleSearch={ this.handleSearch } />
+                {isFetched ? <Loader /> : <PicturesResults pictureArray={pictureArray} />}
             </>
         )
     }

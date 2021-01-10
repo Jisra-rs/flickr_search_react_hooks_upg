@@ -1,10 +1,31 @@
-/* import React from 'react';
+import React from "react";
+import Picture from "./Picture";
 
 
-
-function PicturesResults () {
-
-}
+const PicturesResults = props => {
+  const results = props.pictureArray;
+  let images;
+  let noImages;
+  // map variables to each item in fetched image array and return image component
+  if (results.photo.length > 0) {
+    images = results.photo.map(image => {
+      let farm = image.farm;
+      let server = image.server;
+      let id = image.id;
+      let secret = image.secret;
+      let title = image.title;
+      let url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
+      return <Picture url={url} key={id} alt={title} />;
+    });
+  } else {
+    // noImages = <NoImages />; // return 'not found' component if no images fetched
+  }
+  return (
+    <div>
+      <ul>{images}</ul>
+      {noImages}
+    </div>
+  );
+};
 
 export default PicturesResults;
- */
