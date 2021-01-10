@@ -1,21 +1,23 @@
 import HomeHeader from './components/HomeHeader';
-import SearchTool from './components/SearchTool';
-import PicturesResult from './components/PicturesResults';
-import PaginationResults from './components/PaginationResults';
+// import SearchTool from './components/SearchTool';
+// import PicturesResultsContext from './context/PicturesResultsContext';
+// import PaginationResults from './components/PaginationResults';
 import HomeContainer from './components/HomeContainer';
-import PictureModalView from './components/PictureModalView';
+// import PictureModalView from './components/PictureModalView';
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <HomeHeader/>
-      <SearchTool/>
-      <PaginationResults/>
-      <PicturesResult/>
-      <HomeContainer/>
-    </div>
+    // <PicturesResultsContext>
+      <div className="App">
+        <HomeContainer/>
+{/*         <SearchTool/>
+        <PaginationResults/>
+      <PicturesResult/> 
+        <HomeContainer/> */}
+      </div>
+    // </PicturesResultsContext>
   );
 }
 

@@ -1,15 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
-class PaginationResults extends Component{
+const PaginationResults = () => {
 
-    render() {
-        return(
+    return(
 
-        <div id="_pagination"></div>
+    <div id="_pagination"></div>
 
-        );
-    }
+    );
+
 }
 
 export default PaginationResults;

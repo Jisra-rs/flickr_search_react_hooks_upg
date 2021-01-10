@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 
 
-class PictureModalView extends Component{
+const PictureModalView = () => {
 
-    render() {
-        return(
+    return(
 
-        <div id="PictureModalView"></div>
+    <div id="PictureModalView"></div>
 
-        );
-    }
+    );
 }
 
 export default PictureModalView;

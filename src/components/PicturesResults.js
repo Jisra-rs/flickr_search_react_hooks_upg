@@ -1,15 +1,10 @@
-import React, {Component} from 'react';
+/* import React from 'react';
 
 
-class PicturesResults extends Component{
 
-    render() {
-        return(
+function PicturesResults () {
 
-        <div id="_pictures_results"></div>
-
-        );
-    }
 }
 
 export default PicturesResults;
+ */
