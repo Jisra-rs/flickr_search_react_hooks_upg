@@ -26,7 +26,7 @@ class SearchTool extends Component{
                         value={ search }
                         onChange={ this.handleChange }
                         placeholder="Search photos"/>
-                      <input type="button" id="_search" onClick={ () => handleSearch (search) } value="Search"/>
+                      <input type="button" id="_search" onClick={ () => handleSearch (search, 1) } value="Search"/>
                   </div>
               </div>
             </>
