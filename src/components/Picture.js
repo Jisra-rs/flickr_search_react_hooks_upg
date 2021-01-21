@@ -1,8 +1,8 @@
 import React from "react";
 
-const Picture = ({ url, title }) => (
+const Picture = ({ url, alt, id, handleOpenModal }) => (
   <li>
-    <img src={url} alt={title} />
+    <img src={ url } alt={ alt } key={ id } onClick={ handleOpenModal } data-id={ id }/>
   </li>
 );
 

@@ -9,7 +9,6 @@ class SearchTool extends Component{
   handleChange = ({ target }) => {
     const { value } = target
     this.setState({ search : value});
-    console.log(this.state.search);
   }
 
     render() {
