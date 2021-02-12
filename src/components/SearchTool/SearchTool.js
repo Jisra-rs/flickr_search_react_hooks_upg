@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import './searchTool.css';
+
 class SearchTool extends Component{
   constructor (props){
     super(props);

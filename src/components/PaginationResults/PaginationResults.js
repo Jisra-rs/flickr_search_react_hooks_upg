@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './paginationResults.css'
 
 const PaginationResults = props => {
 

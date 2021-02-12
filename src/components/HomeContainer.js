@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import HomeHeader from './HomeHeader';
-import SearchTool from './SearchTool';
-import PicturesResults from './PicturesResults';
+import HomeHeader from './HomeHeader/HomeHeader';
+import SearchTool from './SearchTool/SearchTool';
+import PicturesResults from './PicturesResults/PicturesResults';
 import Loader from './Loader';
 import { getPicturesBySearch } from '../services/PicturesService';
-import PaginationResults from './PaginationResults';
-import PictureModalView from './PictureModalView';
+import PaginationResults from './PaginationResults/PaginationResults';
+import PictureModalView from './PictureModalView/PictureModalView';
 
 class HomeContainer extends Component{
     constructor(props){
@@ -62,8 +62,8 @@ class HomeContainer extends Component{
      */
     // Abrir modal
     handleOpenModal = (e) => {
-        let indexPicArray = Number(e.target.dataset.id);
-        let totalPic = this.state.total - 1;
+        let indexPicArray   = Number(e.target.dataset.id);
+        let totalPic        = this.state.total - 1;
         this.setState({
             hideModal: false,
             indexPic: indexPicArray,

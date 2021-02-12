@@ -1,0 +1,26 @@
+/* CSS document */
+
+._searchObj {
+    display: flex;
+    margin: 20px;
+    height: 30px;
+}
+
+._searchObj input[type="text"] {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+._searchObj input[type="button"] {
+    width: 10%;
+    padding: 0 10px;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 120px;
+    background-color: #DCDCDC;
+    border: solid 2px #808080;
+    border-radius: .5rem;
+    cursor: pointer;
+}

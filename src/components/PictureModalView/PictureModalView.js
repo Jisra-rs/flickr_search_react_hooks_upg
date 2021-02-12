@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+import './pictureModalView.css'
 
 const PictureModalView = props => {
 
@@ -16,14 +17,15 @@ const PictureModalView = props => {
 
     return(
 
-    <div > { title }
-        <span onClick= { handleCloseModal }>&times;</span>
-        <div >
+    <div className="modal"> 
+        <span className="caption"> Information | -&nbsp;- { title }</span>
+        <span className="close" onClick= { handleCloseModal }>&times;</span>
+        <div className="button_div">
             <button disabled={ btnIniModDisable } onClick= { prevPicture } > &lt; </button>
             <button disabled={ btnFinModDisable } onClick= { nextPicture } > &gt; </button>
         </div>
         <div>
-            <img src={ url }></img>
+            <img className="modal-content" src={ url }></img>
         </div>
          
     </div>

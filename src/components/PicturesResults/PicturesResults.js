@@ -1,5 +1,6 @@
 import React from "react";
-import Picture from "./Picture";
+import Picture from "../Picture/Picture";
+import './picturesResults.css';
 
 
 const PicturesResults = props => {
@@ -23,10 +24,10 @@ const PicturesResults = props => {
     // noImages = <NoImages />; // return 'not found' component if no images fetched
   }
   return (
-    <div>
-      <ul>{images}</ul>
-      {noImages}
-    </div>
+      <div className="_divphotos">
+        <ul className="_ulphotos">{images}</ul>
+        {noImages}
+      </div>
   );
 };
 
