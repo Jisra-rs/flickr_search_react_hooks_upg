@@ -8,7 +8,7 @@ const HomeHeader = () => {
         return(
             <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h1>Flickr Search Tool - React </h1>
+            <h1>Flickr Search Tool - React <span>(Hooks upgrade)</span> </h1>
 
           </header>
         );

@@ -1,38 +1,33 @@
-import React, {Component} from 'react';
+import React, { useState } from 'react';
 import './searchTool.css';
 
-class SearchTool extends Component{
-  constructor (props){
-    super(props);
+const SearchTool = props => {
 
-    this.state = { search: ''}
-  }
+  const { handleSearch } = props
 
-  handleChange = ({ target }) => {
+  // State
+  const [search, setSearch] = useState('')
+
+  const handleChange = ({ target }) => {
     const { value } = target
-    this.setState({ search : value});
+    setSearch (value)
   }
 
-    render() {
-      const { handleSearch } = this.props
-      const { search } = this.state
-
-        return(
-            <>
-              <div className="_divSearch">
-                  <div className="_searchObj">
-                      <input 
-                        type="text" 
-                        id="_text_label" 
-                        value={ search }
-                        onChange={ this.handleChange }
-                        placeholder="Search photos"/>
-                      <input type="button" id="_search" onClick={ () => handleSearch (search, 1) } value="Search"/>
-                  </div>
-              </div>
-            </>
-        );
-    }
+  return(
+      <>
+        <div className="_divSearch">
+            <div className="_searchObj">
+                <input 
+                  type="text" 
+                  id="_text_label" 
+                  value={ search }
+                  onChange={ handleChange }
+                  placeholder="Search photos"/>
+                <input type="button" id="_search" onClick={ () => handleSearch (search, 1) } value="Search"/>
+            </div>
+        </div>
+      </>
+  );
 }
 
 export default SearchTool;
