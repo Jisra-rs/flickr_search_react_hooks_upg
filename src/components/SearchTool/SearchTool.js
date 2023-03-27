@@ -8,24 +8,26 @@ const SearchTool = props => {
   // State
   const [search, setSearch] = useState('')
 
-  const handleChange = ({ target }) => {
-    const { value } = target
-    setSearch (value)
+  const handleChange = ( ev ) => {
+    setSearch (ev.value)
+    console.log(setSearch)
   }
 
   return(
       <>
-        <div className="_divSearch">
-            <div className="_searchObj">
-                <input 
-                  type="text" 
-                  id="_text_label" 
-                  value={ search }
-                  onChange={ handleChange }
-                  placeholder="Search photos"/>
-                <input type="button" id="_search" onClick={ () => handleSearch (search, 1) } value="Search"/>
-            </div>
-        </div>
+      <form onSubmit={ ev => { ev.preventDefault(); handleSearch(search, 1)}}>
+          <div className="_divSearch">
+              <div className="_searchObj">
+                  <input 
+                    type="text" 
+                    id="_text_label" 
+                    value={ search }
+                    onChange={ handleChange }
+                    placeholder="Search photos"/>
+                  <input type="submit" id="_search" value="Search"/>
+              </div>
+          </div>
+        </form>
       </>
   );
 }
